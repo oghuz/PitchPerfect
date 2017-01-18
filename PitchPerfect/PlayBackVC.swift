@@ -11,7 +11,7 @@ import AVFoundation
 
 class PlayBackVC: UIViewController {
     
-    var RecordedAudioURL : NSURL!
+    var recordedAudioURL : NSURL!
     
     var audioFile : AVAudioFile!
     var audioEngine : AVAudioEngine!
@@ -19,26 +19,25 @@ class PlayBackVC: UIViewController {
     var stopTimer : Timer!
     
         
-    @IBOutlet weak var Snail: UIButton!
-    @IBOutlet weak var Rabbit: UIButton!
+    @IBOutlet weak var snail: UIButton!
+    @IBOutlet weak var rabbit: UIButton!
     @IBOutlet weak var chipmunk: UIButton!
-    @IBOutlet weak var DarthVader: UIButton!
+    @IBOutlet weak var darthVader: UIButton!
     @IBOutlet weak var reverb: UIButton!
-    @IBOutlet weak var Echo: UIButton!
-    @IBOutlet weak var Stop: UIButton!
+    @IBOutlet weak var echo: UIButton!
+        
+    @IBOutlet weak var stopButton: UIButton!
     
-    @IBOutlet weak var StopButton: UIButton!
     
-    
-    enum ButtonType :Int{
+    enum buttonType :Int{
         case slow = 0, fast, chipmunk, vader, echo ,reverb
     }
     
-    @IBAction func PlaySoundsForButton(sender : UIButton){
+    @IBAction func playSoundsForButton(sender : UIButton){
     
         print("Play Button pressed")
         
-        switch (ButtonType(rawValue: sender.tag)!) {
+        switch (buttonType(rawValue: sender.tag)!) {
         case .slow:
             playSound(rate: 0.5)
         case .fast:
@@ -57,7 +56,7 @@ class PlayBackVC: UIViewController {
     
     }
     
-    @IBAction func StopButtonPressed(sender : UIButton){
+    @IBAction func stopButtonPressed(sender : UIButton){
     
         print("Stop Button pressed")
         

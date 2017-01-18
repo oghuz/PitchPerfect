@@ -30,7 +30,7 @@ extension PlayBackVC: AVAudioPlayerDelegate {
     func setupAudio() {
         // initialize (recording) audio file
         do {
-            audioFile = try AVAudioFile(forReading: RecordedAudioURL as URL)
+            audioFile = try AVAudioFile(forReading: recordedAudioURL as URL)
         } catch {
             showAlert(title: Alerts.AudioFileError, message: String(describing: error))
         }
@@ -143,19 +143,19 @@ extension PlayBackVC: AVAudioPlayerDelegate {
         switch(playState) {
         case .Playing:
             setPlayButtonsEnabled(enabled: false)
-            StopButton.isEnabled = true
+            stopButton.isEnabled = true
         case .NotPlaying:
             setPlayButtonsEnabled(enabled: true)
-            StopButton.isEnabled = false
+            stopButton.isEnabled = false
         }
     }
     
     func setPlayButtonsEnabled(enabled: Bool) {
-        Snail.isEnabled = enabled
+        snail.isEnabled = enabled
         chipmunk.isEnabled = enabled
-        Rabbit.isEnabled = enabled
-        DarthVader.isEnabled = enabled
-        Echo.isEnabled = enabled
+        rabbit.isEnabled = enabled
+        darthVader.isEnabled = enabled
+        echo.isEnabled = enabled
         reverb.isEnabled = enabled
     }
 
