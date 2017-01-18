@@ -1,0 +1,6 @@
+language: Swift #1
+osx_image: Xcode 8.2.1 #2
+xcode_project: PitchPerfect .xcodeproj #3
+xcode_scheme: PitchPerfect #4
+xcode_sdk: iphonesimulator 10.1 #5
+
