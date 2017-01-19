@@ -69,6 +69,11 @@ class PlayBackVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupAudio()
+        
+        let colors = [UIColor.white, .black, .green, .red, .lightGray, .cyan]
+        let randomIndex = Int(arc4random_uniform(UInt32(colors.count)))
+        
+        self.view.backgroundColor = colors[randomIndex]
 
         // Do any additional setup after loading the view.
     }

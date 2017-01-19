@@ -16,12 +16,15 @@ class AudioRecordingVC: UIViewController, AVAudioRecorderDelegate{
     @IBOutlet var stopRecordingButtonOutlet: UIButton!
     
     var recordAudio : AVAudioRecorder!
+    let colors = [UIColor.white, .black, .green, .lightGray, .cyan]
+   
     
     override func viewDidLoad() {
         super.viewDidLoad()
-       
-        // Do any additional setup after loading the view, typically from a nib.
-    }
+       let randomIndex = Int(arc4random_uniform(UInt32(colors.count)))
+        
+        self.view.backgroundColor = colors[randomIndex]
+            }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
