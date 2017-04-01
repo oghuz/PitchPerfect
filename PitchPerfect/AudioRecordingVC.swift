@@ -17,7 +17,7 @@ class AudioRecordingVC: UIViewController, AVAudioRecorderDelegate{
     
     var recordAudio : AVAudioRecorder!
     let colors = [UIColor.white, .black, .green, .lightGray, .cyan]
-   
+    let audioSession = AVAudioSession.sharedInstance()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -65,7 +65,7 @@ class AudioRecordingVC: UIViewController, AVAudioRecorderDelegate{
             AVFormatIDKey : Int(kAudioFormatMPEG4AAC),
             AVSampleRateKey : 12000,
             AVNumberOfChannelsKey : 1,
-            AVEncoderAudioQualityKey:AVAudioQuality.high.rawValue
+            AVEncoderAudioQualityKey:AVAudioQuality.max.rawValue
         ]
         
         let documentDir = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
@@ -73,7 +73,7 @@ class AudioRecordingVC: UIViewController, AVAudioRecorderDelegate{
         let filePathName = documentPathMember.appendingPathComponent("RecordedAudio.m4a")
         
     
-        let audioSession = AVAudioSession.sharedInstance()
+        
         try! audioSession.setCategory( AVAudioSessionCategoryPlayAndRecord)
         try! audioSession.setActive(true)
         try! recordAudio = AVAudioRecorder.init(url: filePathName, settings: settings)
@@ -90,6 +90,7 @@ class AudioRecordingVC: UIViewController, AVAudioRecorderDelegate{
     func audioRecorderDidFinishRecording(_ recorder: AVAudioRecorder, successfully flag: Bool) {
         if flag{
         
+            try! audioSession.setCategory(AVAudioSessionCategoryPlayback)
             self.performSegue(withIdentifier: "PlayBack", sender: recordAudio.url)
             print("Did finish recoeding")
         
