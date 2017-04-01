@@ -64,7 +64,7 @@ extension PlayBackVC: AVAudioPlayerDelegate {
         // node for reverb
         let reverbNode = AVAudioUnitReverb()
         reverbNode.loadFactoryPreset(.cathedral)
-        reverbNode.wetDryMix = 50
+        reverbNode.wetDryMix = 100
         audioEngine.attach(reverbNode)
         
         // connect nodes

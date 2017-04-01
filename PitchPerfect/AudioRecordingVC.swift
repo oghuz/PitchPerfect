@@ -76,13 +76,9 @@ class AudioRecordingVC: UIViewController, AVAudioRecorderDelegate{
         let audioSession = AVAudioSession.sharedInstance()
         try! audioSession.setCategory( AVAudioSessionCategoryPlayAndRecord)
         try! audioSession.setActive(true)
-            
-            
-        try! audioSession.setCategory( AVAudioSessionCategoryPlayAndRecord)
-        try! audioSession.setActive(true)
-            
-            
         try! recordAudio = AVAudioRecorder.init(url: filePathName, settings: settings)
+        
+        try! audioSession.overrideOutputAudioPort(AVAudioSessionPortOverride.speaker)
        
         recordAudio.delegate = self
         recordAudio.isMeteringEnabled = true
