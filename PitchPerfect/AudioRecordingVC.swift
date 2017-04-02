@@ -74,12 +74,10 @@ class AudioRecordingVC: UIViewController, AVAudioRecorderDelegate{
         
     
         
-        try! audioSession.setCategory( AVAudioSessionCategoryPlayAndRecord)
+        try! audioSession.setCategory( AVAudioSessionCategoryPlayAndRecord, with:AVAudioSessionCategoryOptions.defaultToSpeaker)
         try! audioSession.setActive(true)
         try! recordAudio = AVAudioRecorder.init(url: filePathName, settings: settings)
         
-        try! audioSession.overrideOutputAudioPort(AVAudioSessionPortOverride.speaker)
-       
         recordAudio.delegate = self
         recordAudio.isMeteringEnabled = true
         recordAudio.prepareToRecord()
@@ -90,7 +88,6 @@ class AudioRecordingVC: UIViewController, AVAudioRecorderDelegate{
     func audioRecorderDidFinishRecording(_ recorder: AVAudioRecorder, successfully flag: Bool) {
         if flag{
         
-            try! audioSession.setCategory(AVAudioSessionCategoryPlayback)
             self.performSegue(withIdentifier: "PlayBack", sender: recordAudio.url)
             print("Did finish recoeding")
         
