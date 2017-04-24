@@ -1,6 +1,6 @@
 # PitchPerfect
 ## Discription
-record conversations and play it back with six different efffects
+Built an iPhone app that records a conversation between you and a friend, and then makes your voices sound like a Chipmunk or Darth Vader.
 ### Effectes
 1.Snale
 2.Rabbit
@@ -10,7 +10,7 @@ record conversations and play it back with six different efffects
 6.Chipmunk
 
 ## Tool and Language
-  `Swift 3`  `Xcode 8`
+  `Swift 3`  `Xcode 8` `Outlets` `ActionsAVFoundation`
   
 ## install
 all you have to do is `download` or `clone` the project and run it in `Xcode`
