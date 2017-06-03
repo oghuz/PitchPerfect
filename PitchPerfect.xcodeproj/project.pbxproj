@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		D62954051DA87CDA00E6DA8F /* PlayBackVC+Audio.swift in Sources */ = {isa = PBXBuildFile; fileRef = D62954041DA87CDA00E6DA8F /* PlayBackVC+Audio.swift */; };
+		D644710E1EE31FC600B9354C /* IBDesignabl.swift in Sources */ = {isa = PBXBuildFile; fileRef = D644710D1EE31FC600B9354C /* IBDesignabl.swift */; };
 		D6636C971DA6D75900445C20 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6636C961DA6D75900445C20 /* AppDelegate.swift */; };
 		D6636C991DA6D75900445C20 /* AudioRecordingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6636C981DA6D75900445C20 /* AudioRecordingVC.swift */; };
 		D6636C9C1DA6D75900445C20 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6636C9A1DA6D75900445C20 /* Main.storyboard */; };
@@ -37,6 +38,7 @@
 
 /* Begin PBXFileReference section */
 		D62954041DA87CDA00E6DA8F /* PlayBackVC+Audio.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "PlayBackVC+Audio.swift"; sourceTree = "<group>"; };
+		D644710D1EE31FC600B9354C /* IBDesignabl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IBDesignabl.swift; sourceTree = "<group>"; };
 		D6636C931DA6D75900445C20 /* PitchPerfect.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PitchPerfect.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6636C961DA6D75900445C20 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D6636C981DA6D75900445C20 /* AudioRecordingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioRecordingVC.swift; sourceTree = "<group>"; };
@@ -109,6 +111,7 @@
 				D6636C9F1DA6D75900445C20 /* LaunchScreen.storyboard */,
 				D6636CA21DA6D75900445C20 /* Info.plist */,
 				D6F362721DA813F500D161A4 /* Assets.xcassets */,
+				D644710D1EE31FC600B9354C /* IBDesignabl.swift */,
 			);
 			path = PitchPerfect;
 			sourceTree = "<group>";
@@ -268,6 +271,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D644710E1EE31FC600B9354C /* IBDesignabl.swift in Sources */,
 				D6636C991DA6D75900445C20 /* AudioRecordingVC.swift in Sources */,
 				D6636C971DA6D75900445C20 /* AppDelegate.swift in Sources */,
 				D62954051DA87CDA00E6DA8F /* PlayBackVC+Audio.swift in Sources */,

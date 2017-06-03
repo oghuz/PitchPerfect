@@ -78,6 +78,7 @@ class AudioRecordingVC: UIViewController, AVAudioRecorderDelegate{
         try! audioSession.setActive(true)
         try! recordAudio = AVAudioRecorder.init(url: filePathName, settings: settings)
         
+       
         recordAudio.delegate = self
         recordAudio.isMeteringEnabled = true
         recordAudio.prepareToRecord()
